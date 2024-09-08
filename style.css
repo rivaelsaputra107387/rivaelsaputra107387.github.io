@@ -1,99 +1,175 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-header, footer {
-    background-color: #FFFDD0;
-    color: #000;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin-right: 20px;
-}
-
-header nav ul li:last-child {
-    margin-right: 0;
-}
-
-header nav ul li a {
-    color: #000;
-    text-decoration: none;
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 5%;
-}
-
-article {
-    flex: 2;
-    background-color: #FFFDD0;
-    padding: 20px;
-    margin-right: 20px;
-}
-
-aside {
-    flex: 1;
-    background-color: #FFFDD0;
-    padding: 20px;
     box-sizing: border-box;
 }
 
-aside img {
-    width: 100%;
-    border-radius: 10%;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-.text-head {
+/* Background image banner for the header */
+header {
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
-    text-transform: uppercase;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #333;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navigation menu aligned to the top */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ADEF;
+}
+
+.hero {
+    padding: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.small-text {
-    text-align: center;
-    font-size: 12px;
-    font-style: italic;
-    opacity: 80%;
-    margin-top: -10px;
+.hero p {
+    font-size: 1.5rem;
 }
-h5,
-h4 {
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #333333c1;
-}
-.text-big {
-    font-size: 3rem;
-    font-weight: bold;
-    color: black;
-    float: left;
-    line-height: 1;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
+.cv-button i {
+    margin-right: 8px;
 }
 
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Styling for About Me section with circular photo */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Project section layout - categories stacked, images aligned horizontally */
+.project-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+}
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+.project-item p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #002244;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Social media links in the footer */
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00ADEF;
+}
+
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    main {
+    .project-images {
         flex-direction: column;
     }
-
-    article {
-        margin-right: 0;
-    }
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
